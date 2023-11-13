@@ -1,0 +1,206 @@
+/* style.css */
+
+/* Styles for the 'App' class */
+.App {
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+/* Styles for the 'blood-type-boxes' class */
+.blood-type-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Styles for the 'blood-type-box' class */
+.blood-type-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: 10px;
+}
+
+.blood-type-box h3 {
+    color: #333;
+    font-size: 18px;
+    margin: 0;
+}
+
+.blood-type-box p {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Styles for the 'Add new donor' button */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styles for the 'AddDonor' component */
+.add-donor-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.add-donor-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.donor-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+/* Requests.css */
+
+/* Styles for the main container */
+.requests-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styles for the table */
+  .requests-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .requests-table th, .requests-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .requests-table th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Styles for the buttons */
+  .approve-button, .reject-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  /* Styles for the Approve button */
+  .approve-button {
+    background-color: #28a745;
+  }
+  
+  /* Styles for the Reject button */
+  .reject-button {
+    background-color: #dc3545;
+  }
+
+  .add-donor-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.add-donor-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the 'View Requests' button */
+.view-requests-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.view-requests-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the 'Delete a Donor' button */
+.delete-donor-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.delete-donor-button:hover {
+    background-color: #0056b3;
+}
+  

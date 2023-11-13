@@ -1,0 +1,208 @@
+/* patient-login.css */
+
+.patient-login-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+  
+  .login-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    margin: 10px 0;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .login-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #ffa915;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  /* patient-dashboard.css */
+
+.patient-dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+  
+  .dashboard-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-message {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .orders-heading {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .order-table-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+  /* add-order.css */
+
+.add-order-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+  
+  .order-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .order-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin: 10px 0;
+  }
+  
+  .form-label {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .add-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+/* admin-login.css */
+
+.admin-login-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.login-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin: 10px 0;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+/* style.css */
+
+.delete-donor-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.donor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.donor-table th, .donor-table td {
+  border: 1px solid #333; /* Darker border color */
+  padding: 10px;
+  text-align: center; /* Center the text */
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.delete-button {
+  background-color: #ff0000; /* Red background color */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
