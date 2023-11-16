@@ -23,7 +23,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Admin/>}/>
+          <Route path="/" element={<Login/>} />
+          <Route path="/admin" element={<Admin/>}/>
           <Route path="/add_donor" element={<AddDonor/>}/>
           <Route path="/requests" element={<Requests/>}/>
           <Route path="/patient_login" element={<PatientLogin/>}/>
@@ -31,7 +32,6 @@ function App() {
           <Route path="/add_order/:patientId" element={<AddOrder/>} />
           <Route path="/admin_login" element={<AdminLogin/>} />
           <Route path="/delete_donor" element={<DeleteDonor/>} />
-          <Route path="/login" element={<Login/>} />
           <Route path="/add_patient" element={<AddPatient/>} />
           
           

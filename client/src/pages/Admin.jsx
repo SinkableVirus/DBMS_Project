@@ -34,7 +34,8 @@ const Admin = () => {
       <button className="add-donor-button"><Link to="/add_donor">Add new donor</Link></button>
         
             <button className="view-requests-button"><Link to="/requests">View Requests</Link></button>
-            <button className="delete-donor-button"><Link to="/delete_donor">Delete a donor</Link></button>
+            <button className="view-requests-button"><Link to="/delete_donor">Delete a donor</Link></button>
+            <button className="delete-donor-button"><Link to="/">Back to Login</Link></button>
         </div>
     </div>
   );

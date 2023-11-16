@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+
 
 const AddPatient = () => {
     const [patient, setPatient] = useState({
@@ -8,7 +8,7 @@ const AddPatient = () => {
         patient_password: "",
     });
 
-    const navigate = useNavigate();
+
 
     const handleChange = (e) => {
         setPatient((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -37,7 +37,7 @@ const AddPatient = () => {
                     <label>Patient Password:</label>
                     <input type="text" name="patient_password" onChange={handleChange} />
                 </div>
-                <button className="add-button" onClick={handleClick}>
+                <button className="login-button" onClick={handleClick}>
                     Register
                 </button>
             </form>

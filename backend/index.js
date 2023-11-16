@@ -244,6 +244,49 @@ app.post("/patient", (req, res) => {
   })
 });
 
+app.post("/donor", (req, res) => {
+  const donorQuery = "INSERT INTO Donor (donor_name, Blood_Type, Blood_Amount, donor_password) VALUES (?, ?, ?, ?)";
+  const donorValues = [req.body.donor_name, req.body.Blood_Type, req.body.Blood_Amount, req.body.donor_password];
+
+  const sellsQuery = "INSERT INTO Sells (blood_bank_id, donor_id) VALUES (?, ?)";
+  const sellsValues = [2, 0]; // Assuming donor_id 0 is auto-incremented and will be generated
+
+  db.beginTransaction((err) => {
+      if (err) {
+          return res.json(err);
+      }
+
+      // Insert into Donor table
+      db.query(donorQuery, donorValues, (err, donorData) => {
+          if (err) {
+              db.rollback(() => {
+                  return res.json(err);
+              });
+          } else {
+              sellsValues[1] = donorData.insertId; // Get the auto-generated donor_id
+
+              // Insert into Sells table
+              db.query(sellsQuery, sellsValues, (err, sellsData) => {
+                  if (err) {
+                      db.rollback(() => {
+                          return res.json(err);
+                      });
+                  } else {
+                      db.commit((err) => {
+                          if (err) {
+                              db.rollback(() => {
+                                  return res.json(err);
+                              });
+                          }
+                          res.json({ donorData, sellsData });
+                      });
+                  }
+              });
+          }
+      });
+  });
+});
+
 
 
 

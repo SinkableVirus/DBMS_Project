@@ -60,7 +60,7 @@ const DeleteDonor = () => {
                 </tbody>
             </table>
             <button className="back-button">
-                <Link to="/">Back to Admin Page</Link>
+                <Link to="/admin">Back to Admin Page</Link>
             </button>
         </div>
     );

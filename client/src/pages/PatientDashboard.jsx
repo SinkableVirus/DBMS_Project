@@ -48,6 +48,7 @@ const PatientDashboard = () => {
       <Link to={`/add_order/${patientId}`}>
         <button className="order-table-button">Add New Order</button>
       </Link>
+      <button className="delete-donor-button"><Link to="/">Back to Login</Link></button>
     </div>
   );
 };

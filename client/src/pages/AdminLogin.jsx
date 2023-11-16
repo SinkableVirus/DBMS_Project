@@ -21,7 +21,7 @@ const AdminLogin = () => {
         try {
             const response = await axios.post("http://localhost:8800/admin_login", admin);
             if (response.data.success) {
-                navigate("/");
+                navigate("/admin");
             } else {
                 alert(response.data.message);
             }
