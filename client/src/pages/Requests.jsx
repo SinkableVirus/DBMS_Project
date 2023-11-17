@@ -64,6 +64,7 @@ const Requests = () => {
             <th>Blood Type</th>
             <th>Blood Amount</th>
             <th>Price</th>
+            <th>Order Time</th>
             <th>Status</th>
             <th>Actions</th>
           </tr>
@@ -75,6 +76,7 @@ const Requests = () => {
               <td className="blood-type">{order.blood_type}</td>
               <td className="blood-amount">{order.blood_amount}</td>
               <td className="price">{order.price}</td>
+              <td className="price">{order.order_time}</td>
               <td className="status">
                 {order.status === 0 ? "Pending" : order.status === 1 ? "Approved" : "Order is rejected"}
               </td>

@@ -31,6 +31,7 @@ const PatientDashboard = () => {
             <th>Blood Type</th>
             <th>Blood Amount</th>
             <th>Price</th>
+            <th>Order Time</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -40,6 +41,7 @@ const PatientDashboard = () => {
               <td>{order.Blood_type}</td>
               <td>{order.Blood_amount}</td>
               <td>{order.price}</td>
+              <td>{order.order_time}</td>
               <td>{order.status === 1 ? 'Approved' : order.status === 0 ? 'Pending' : 'Rejected'}</td>
             </tr>
           ))}

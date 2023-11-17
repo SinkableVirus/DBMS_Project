@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import PatientLogin from "./PatientLogin"
 import AddPatient from "./AddPatient"
 import AdminLogin from "./AdminLogin"
+import AddDonor from "./AddDonor"
 
 
 
@@ -33,6 +34,9 @@ const Login = () => {
         }
         else if(event.target.id === "signUp") {
             setContent(<AddPatient/>)
+        }
+        else if(event.target.id === "governmentLogin") {
+            setContent(<AddDonor/>)
         }
     }
 
@@ -94,6 +98,7 @@ const Login = () => {
                     <p id = "login" style = {{fontSize: format["login"], transitionDuration: "500ms", cursor: "pointer"}} onClick = {handleClick}>Patient Login</p>
                     <p id = "adminLogin" style = {{fontSize: format["adminLogin"], transitionDuration: "500ms", cursor: "pointer"}} onClick = {handleClick}>Admin Login</p>
                     <p id = "signUp" style = {{fontSize: format["signUp"], transitionDuration: "500ms", cursor: "pointer"}} onClick = {handleClick}>Register Patient</p>
+                    <p id = "governmentLogin" style = {{fontSize: format["governmentLogin"], transitionDuration: "500ms", cursor: "pointer"}} onClick = {handleClick}>Register Donor</p>
                 </div>
 
                 <div style = {menu}>

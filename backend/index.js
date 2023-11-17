@@ -22,12 +22,11 @@ app.get("/get-orders-for-patient/:patientId", (req, res) => {
   const { patientId } = req.params;
 
   // Perform a database query to retrieve orders for the given patient
-  const query = "SELECT o.* FROM Order_table o JOIN Purchase p ON o.order_id = p.order_id WHERE p.patient_id = ?";
+  const query = "SELECT o.*, DATE_FORMAT(o.order_time, '%Y-%m-%d %H:%i:%s') AS order_time FROM Order_table o JOIN Purchase p ON o.order_id = p.order_id WHERE p.patient_id = ?";
   db.query(query, [patientId], (err, results) => {
     if (err) {
       return res.status(500).json({ success: false, message: "Database error" });
     }
-
     return res.json(results);
   });
 });
@@ -36,7 +35,7 @@ app.get("/get-orders-for-patient/:patientId", (req, res) => {
 
 app.get("/requests", (req, res) => {
     // Replace the following SQL query with your query to retrieve orders
-    const sql = "SELECT order_id,patient_name, blood_type, blood_amount, price, status FROM patient NATURAL JOIN purchase NATURAL JOIN order_table";
+    const sql = "SELECT order_id,patient_name, blood_type, blood_amount, price, DATE_FORMAT(order_time, '%Y-%m-%d %H:%i:%s') AS order_time,status FROM patient NATURAL JOIN purchase NATURAL JOIN order_table";
     
     db.query(sql, (err, results) => {
       if (err) {
@@ -210,7 +209,7 @@ app.post("/add-order", (req, res) => {
   const { Blood_type, Blood_amount, price, status, patient_id } = req.body;
 
   // Insert the new order into the Order_table
-  const orderQuery = "INSERT INTO Order_table (Blood_type, Blood_amount, price, status) VALUES (?, ?, ?, ?)";
+  const orderQuery = "INSERT INTO Order_table (Blood_type, Blood_amount, price,order_time, status) VALUES (?, ?, ?,now(), ?)";
   db.query(
     orderQuery,
     [Blood_type, Blood_amount, price, status],

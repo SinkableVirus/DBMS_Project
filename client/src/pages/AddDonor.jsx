@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+
 
 const AddDonor = () => {
     const [donor, setDonor] = useState({
@@ -10,7 +10,7 @@ const AddDonor = () => {
         donor_password: "",
     });
 
-    const navigate = useNavigate();
+
 
     const handleChange = (e) => {
         setDonor((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -20,7 +20,8 @@ const AddDonor = () => {
         e.preventDefault();
         try {
             await axios.post("http://localhost:8800/donor", donor); // Adjust the API endpoint
-            navigate("/admin"); // Navigate to the appropriate page after adding a donor
+            window.location.reload(); // Navigate to the appropriate page after adding a donor
+            // Navigate to the appropriate page after adding a donor
         } catch (err) {
             console.log(err);
         }
@@ -46,7 +47,7 @@ const AddDonor = () => {
                     <label>Donor Password:</label>
                     <input type="text" name="donor_password" onChange={handleChange} />
                 </div>
-                <button className="add-button" onClick={handleClick}>
+                <button className="login-button" onClick={handleClick}>
                     Add New Donor
                 </button>
             </form>
