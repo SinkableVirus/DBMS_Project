@@ -47,6 +47,7 @@ CREATE TABLE Order_table (
     Blood_type VARCHAR(255),
     Blood_amount DECIMAL(10, 2),
     price int,
+    order_time datetime,
     status int
 );
 
@@ -163,15 +164,15 @@ insert into sells values(2,4);
 
 
 insert into patient (patient_name,patient_password) VALUES ('g','5742');
-insert into order_table ( blood_type, blood_amount, price,status) values ( 'A+', 5.00, 500,0);
+insert into order_table ( blood_type, blood_amount, price,order_time,status) values ( 'A+', 5.00, 500,now(),0);
 insert into purchase values(1,1,1);
 
 insert into patient (patient_name, patient_password) VALUES ('x','1982');
-insert into order_table ( blood_type, blood_amount,price,status) values ( 'AB+', 2.00, 200,1);
+insert into order_table ( blood_type, blood_amount,price,order_time,status) values ( 'AB+', 2.00, 200,now(),1);
 insert into purchase values(2,1,2);
 
 insert into patient (patient_name, patient_password) VALUES ('y',  '5684');
-insert into order_table ( blood_type, blood_amount,price,status) values ('A+', 6.00,600,0);
+insert into order_table ( blood_type, blood_amount,price,order_time,status) values ('A+', 6.00,600,now(),0);
 insert into purchase values(3,1,3);
 
 
